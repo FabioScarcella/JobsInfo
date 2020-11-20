@@ -8,9 +8,11 @@ package GetInfo;
 import com.mycompany.jobsinfo.JobsInfo;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,9 +36,17 @@ public class URLInfo {
         SaveHTMLInfo saveInfo = new SaveHTMLInfo(this);
         saveInfo.createFile();
         try{
-            URL oracle = new URL(wUrl);
+            URLConnection connection = new URL(wUrl).openConnection();
+            connection.setRequestProperty("Accept-Charset", "UTF-8");
             BufferedReader in = new BufferedReader(
-            new InputStreamReader(oracle.openStream()));
+                    new InputStreamReader(connection.getInputStream()));
+            
+            
+            
+            
+            /*URL url = new URL(wUrl);
+            BufferedReader in = new BufferedReader(
+                new InputStreamReader(url.openStream()));*/
 
             String inputLine;
             while ((inputLine = in.readLine()) != null){

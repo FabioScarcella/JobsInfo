@@ -82,6 +82,14 @@ public class SaveHTMLInfo {
             Logger.getLogger(SaveHTMLInfo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(SaveHTMLInfo.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            ExamineHTML examineHTML = new ExamineHTML(this);
         }
+    }
+    
+    
+    
+    public String getFileName(){
+        return textName;
     }
 }
