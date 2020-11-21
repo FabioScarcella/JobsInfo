@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GetInfo;
+package com.mycompany.allOffers;
 
+import com.mycompany.offerInfo.OfferGeneralInformation;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,11 +27,13 @@ public class ExamineHTML {
     private String htmlName;
     private Document document; 
     
+    private ArrayList<String> hrefOffers = new ArrayList<>();
+    
     
     public ExamineHTML(SaveHTMLInfo saveHtmlInfo){
         this.saveHtmlInfo = saveHtmlInfo;
         
-        htmlName = saveHtmlInfo.getFileName();
+        this.htmlName = saveHtmlInfo.getFileName();
         getFileInfo();
     }
     
@@ -45,11 +48,13 @@ public class ExamineHTML {
         } catch (IOException ex) {
             Logger.getLogger(ExamineHTML.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            extractOffers();
+            this.hrefOffers = extractOffers();
+            
+            checkEachOffer();
         }
     }
     
-    private void extractOffers(){
+    private ArrayList<String> extractOffers(){
         ArrayList<String> offers = new ArrayList<>();
         
         //Selects the complete UL list of offers
@@ -61,7 +66,18 @@ public class ExamineHTML {
         for(Element oneOffer:allOffers){
             offers.add(oneOffer.attr("href"));
         }
-        
-        out.println(offers);
+        return offers;
+    }
+    
+    
+    private void checkEachOffer(){
+        OfferGeneralInformation generalInfo = new OfferGeneralInformation(this);
+        generalInfo.iterateThroughtEachElement();
+    }
+    
+    
+    //GETTERS SETTERS
+    public ArrayList<String> getHrefOffers(){
+        return hrefOffers;
     }
 }

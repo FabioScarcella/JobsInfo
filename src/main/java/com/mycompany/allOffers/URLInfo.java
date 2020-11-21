@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GetInfo;
+package com.mycompany.allOffers;
 
 import com.mycompany.jobsinfo.JobsInfo;
 import java.io.BufferedReader;
@@ -40,13 +40,6 @@ public class URLInfo {
             connection.setRequestProperty("Accept-Charset", "UTF-8");
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(connection.getInputStream()));
-            
-            
-            
-            
-            /*URL url = new URL(wUrl);
-            BufferedReader in = new BufferedReader(
-                new InputStreamReader(url.openStream()));*/
 
             String inputLine;
             while ((inputLine = in.readLine()) != null){

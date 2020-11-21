@@ -5,7 +5,7 @@
  */
 package com.mycompany.jobsinfo;
 
-import GetInfo.URLInfo;
+import com.mycompany.allOffers.URLInfo;
 
 /**
  * Main class

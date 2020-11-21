@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GetInfo;
+package com.mycompany.offerInfo;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -16,30 +16,28 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 /**
- * Saves the raw HTML info from URLInfo into a new File
+ *
  * @author Fabio
  */
-public class SaveHTMLInfo {
-    private URLInfo urlInfo;
+public class SaveSingleOfferHTML {
     
+    private ArrayList<String> htmlOffer;
     private String textName;
     
-    public SaveHTMLInfo(URLInfo urlInfo){
-        this.urlInfo = urlInfo;
+    public SaveSingleOfferHTML(ArrayList<String> htmlOffer, int index){
+        this.htmlOffer = htmlOffer;
+        
+        createFile(String.valueOf(index));
     }
     
-    /**
+   /**
      * Creates a new File given a specified name from getDate() function
      */
-    public void createFile(){
+    public void createFile(String indexValue){
         String fileName = getDate();
-        String fullName = "RawHTML/"+fileName + ".txt";
+        String fullName = "OffersHTML/"+fileName + "-" + indexValue + ".txt";
         System.out.println(fullName);
         try{
             File myObj = new File(fullName);
@@ -49,9 +47,11 @@ public class SaveHTMLInfo {
                 System.out.println("File already exists");
             }
         } catch (IOException ex) {
-            Logger.getLogger(SaveHTMLInfo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SaveSingleOfferHTML.class.getName()).log(Level.SEVERE, null, ex);
         } finally{
             this.textName = fullName;
+            
+            saveText(htmlOffer);
         }
     }
     
@@ -66,7 +66,7 @@ public class SaveHTMLInfo {
         return dtf.format(now);
     }
     
-    /**
+     /**
      * Saves the raw HTML data into a .txt
      * @param rawHtml ArrayList<String> that contains all the HTML info
      */
@@ -77,11 +77,6 @@ public class SaveHTMLInfo {
             
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
             
-            if(rawHtml.size() < 2){ //all the HTML info it's stored in 1 String meaning that there's not formatted
-               rawHtml = formatHtml(rawHtml.get(0));
-            }
-            
-            
             for(int i = 0; i < rawHtml.size(); i++){
                 bw.write(rawHtml.get(i));
                 bw.newLine();
@@ -89,33 +84,11 @@ public class SaveHTMLInfo {
             
             bw.close();
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(SaveHTMLInfo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SaveSingleOfferHTML.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(SaveHTMLInfo.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            ExamineHTML examineHTML = new ExamineHTML(this);
+            Logger.getLogger(SaveSingleOfferHTML.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            System.out.println("Offer with name: " + textName + " has been saved!");
         }
-    }
-    
-    /**
-     * Formats the HTML
-     * @param rawHtml in String, all the HTML info it's stored in 1 single line
-     * @return ArrayList<String> with all the HTML info splitted line by line
-     */
-    private ArrayList<String> formatHtml(String rawHtml){
-        Document doc = Jsoup.parseBodyFragment(rawHtml);
-        Elements els = doc.getAllElements();
-        
-        ArrayList<String> formattedHtml = new ArrayList<>();
-        
-        for(Element el:els){
-            formattedHtml.add(el.toString());
-        }
-        return formattedHtml;
-    }
-    
-    
-    public String getFileName(){
-        return textName;
     }
 }
