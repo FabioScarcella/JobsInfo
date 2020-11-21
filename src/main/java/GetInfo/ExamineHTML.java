@@ -52,21 +52,16 @@ public class ExamineHTML {
     private void extractOffers(){
         ArrayList<String> offers = new ArrayList<>();
         
-        Elements offersLink = document.select("div.w3-col l6 w3-center");
+        //Selects the complete UL list of offers
+        Elements offersLink = document.select("ul.jobs-search__results-list");
+        //Selects the individual offers of that list
+        Elements allOffers = offersLink.select("a.result-card__full-card-link");
         
-        out.println(offersLink);
         
-        
-        for(Element offerLink:offersLink){
-            //offers.add(offerLink.attr("href"));
-            out.println(offerLink.attr("a"));
+        for(Element oneOffer:allOffers){
+            offers.add(oneOffer.attr("href"));
         }
         
         out.println(offers);
     }
-    
-    private void recursiveFunction(Element el){
-        
-    }
-    
 }
