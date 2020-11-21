@@ -6,6 +6,7 @@
 package com.mycompany.offerInfo;
 
 import com.mycompany.allOffers.ExamineHTML;
+import com.mycompany.extractInformation.ListOffersFiles;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,13 +16,10 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 /**
- *
+ * Gets all the links from ExamineHTML and it opens a connection
+ * Connects to the page and it gets the HTML information from that single Offer
  * @author Fabio
  */
 public class OfferGeneralInformation {
@@ -31,17 +29,31 @@ public class OfferGeneralInformation {
         this.examineHTML = examineHTML;
     }
     
+    /**
+     * Gets all the previous href from ExamineHTML class
+     */
     public void iterateThroughtEachElement(){
         ArrayList<String> links = examineHTML.getHrefOffers();
         
         int index = 0;
         
-        for(String link:links){
+        /*for(String link:links){
             getHTMLOffer(link, index);
             ++index;
+        }*/
+        for(int i = 0; i < 10; i++){
+            getHTMLOffer(links.get(i), index);
+            ++index;
         }
+        
+        analyzeEachOffer();
     }
-    
+    /**
+     * Gets the HTML information from a given URL
+     * Once it gets the information, it creates a new saveOffer object to save it
+     * @param href link of the web page
+     * @param index Nothing important, just for the name after
+     */
     private void getHTMLOffer(String href, int index){
         ArrayList<String> htmlOffer = new ArrayList<>();
         
@@ -62,31 +74,12 @@ public class OfferGeneralInformation {
         } catch (IOException ex) {
             Logger.getLogger(OfferGeneralInformation.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            htmlOffer = checkLength(htmlOffer);
-            
             SaveSingleOfferHTML saveOffer = new SaveSingleOfferHTML(htmlOffer, index);
         }
-        
-        
-        
     }
     
     
-    private ArrayList<String> checkLength(ArrayList<String> htmlOffer){
-        ArrayList<String> fixedList = new ArrayList<>();
-        
-        if(htmlOffer.size() > 1){
-            return htmlOffer;
-        }
-        
-        Document doc = Jsoup.parseBodyFragment(htmlOffer.get(0));
-        Elements els = doc.getAllElements();
-        
-        for(Element el:els){
-            fixedList.add(el.toString());
-        }
-        
-        return fixedList;
+    private void analyzeEachOffer(){
+        ListOffersFiles listOffer = new ListOffersFiles();
     }
-    
 }

@@ -16,6 +16,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 /**
  *
@@ -27,7 +31,7 @@ public class SaveSingleOfferHTML {
     private String textName;
     
     public SaveSingleOfferHTML(ArrayList<String> htmlOffer, int index){
-        this.htmlOffer = htmlOffer;
+        this.htmlOffer = formattHtml(htmlOffer);
         
         createFile(String.valueOf(index));
     }
@@ -90,5 +94,24 @@ public class SaveSingleOfferHTML {
         }finally{
             System.out.println("Offer with name: " + textName + " has been saved!");
         }
+    }
+    
+    
+        /**
+     * Fixes the format of the html information recived
+     * @param htmlOffer list of HTML lines
+     * @return html correcly formatted
+     */
+    private ArrayList<String> formattHtml(ArrayList<String> htmlOffer){
+        ArrayList<String> fixedList = new ArrayList<>();
+        
+        Document doc = Jsoup.parseBodyFragment(htmlOffer.get(0));
+        Elements els = doc.getAllElements();
+        
+        for(Element el:els){
+            fixedList.add(el.toString());
+        }
+        
+        return fixedList;
     }
 }

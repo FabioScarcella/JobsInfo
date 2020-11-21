@@ -1,0 +1,77 @@
+<html>
+ <head></head>
+ <body>
+  <meta name="pageKey" content="d_jobs_guest_details">
+  <meta name="locale" content="es_ES">
+  <meta id="config" data-app-id="com.linkedin.jobs-guest-frontend.d_web" data-custom-tracking-code="" data-tracking-page-type="">
+  <meta id="google-analytics-config" data-use-location-for-dp="" data-use-page-title="">
+  <link rel="canonical" href="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+  <link rel="manifest" href="/homepage-guest/manifest.json" crossorigin="use-credentials">
+  <meta property="al:android:url" content="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+  <meta property="al:android:package" content="com.linkedin.android">
+  <meta property="al:android:app_name" content="LinkedIn">
+  <meta property="al:ios:url" content="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+  <meta property="al:ios:app_store_id" content="288429040">
+  <meta property="al:ios:app_name" content="LinkedIn">
+  <link rel="icon" href="https://static-exp1.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico">
+  <script>function getDfd() {let yFn,nFn;const p=new Promise((y, n)=>{yFn=y;nFn=n;});p.resolve=yFn;p.reject=nFn;return p;}window.lazyloader = getDfd();window.tracking = getDfd();window.impressionTracking = getDfd();window.ingraphTracking = getDfd();window.appDetection = getDfd();</script>
+  <script src="https://static-exp1.licdn.com/sc/h/ec4mdgijccslffs14mpzdyffn" async></script>
+  <title>Bumble busca personas para el cargo de Java Kotlin Engineer en Barcelona, Cataluña, España | LinkedIn</title>
+ </body>
+</html>
+<html>
+ <head></head>
+ <body>
+  <meta name="pageKey" content="d_jobs_guest_details">
+  <meta name="locale" content="es_ES">
+  <meta id="config" data-app-id="com.linkedin.jobs-guest-frontend.d_web" data-custom-tracking-code="" data-tracking-page-type="">
+  <meta id="google-analytics-config" data-use-location-for-dp="" data-use-page-title="">
+  <link rel="canonical" href="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+  <link rel="manifest" href="/homepage-guest/manifest.json" crossorigin="use-credentials">
+  <meta property="al:android:url" content="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+  <meta property="al:android:package" content="com.linkedin.android">
+  <meta property="al:android:app_name" content="LinkedIn">
+  <meta property="al:ios:url" content="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+  <meta property="al:ios:app_store_id" content="288429040">
+  <meta property="al:ios:app_name" content="LinkedIn">
+  <link rel="icon" href="https://static-exp1.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico">
+  <script>function getDfd() {let yFn,nFn;const p=new Promise((y, n)=>{yFn=y;nFn=n;});p.resolve=yFn;p.reject=nFn;return p;}window.lazyloader = getDfd();window.tracking = getDfd();window.impressionTracking = getDfd();window.ingraphTracking = getDfd();window.appDetection = getDfd();</script>
+  <script src="https://static-exp1.licdn.com/sc/h/ec4mdgijccslffs14mpzdyffn" async></script>
+  <title>Bumble busca personas para el cargo de Java Kotlin Engineer en Barcelona, Cataluña, España | LinkedIn</title>
+ </body>
+</html>
+<head></head>
+<body>
+ <meta name="pageKey" content="d_jobs_guest_details">
+ <meta name="locale" content="es_ES">
+ <meta id="config" data-app-id="com.linkedin.jobs-guest-frontend.d_web" data-custom-tracking-code="" data-tracking-page-type="">
+ <meta id="google-analytics-config" data-use-location-for-dp="" data-use-page-title="">
+ <link rel="canonical" href="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+ <link rel="manifest" href="/homepage-guest/manifest.json" crossorigin="use-credentials">
+ <meta property="al:android:url" content="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+ <meta property="al:android:package" content="com.linkedin.android">
+ <meta property="al:android:app_name" content="LinkedIn">
+ <meta property="al:ios:url" content="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+ <meta property="al:ios:app_store_id" content="288429040">
+ <meta property="al:ios:app_name" content="LinkedIn">
+ <link rel="icon" href="https://static-exp1.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico">
+ <script>function getDfd() {let yFn,nFn;const p=new Promise((y, n)=>{yFn=y;nFn=n;});p.resolve=yFn;p.reject=nFn;return p;}window.lazyloader = getDfd();window.tracking = getDfd();window.impressionTracking = getDfd();window.ingraphTracking = getDfd();window.appDetection = getDfd();</script>
+ <script src="https://static-exp1.licdn.com/sc/h/ec4mdgijccslffs14mpzdyffn" async></script>
+ <title>Bumble busca personas para el cargo de Java Kotlin Engineer en Barcelona, Cataluña, España | LinkedIn</title>
+</body>
+<meta name="pageKey" content="d_jobs_guest_details">
+<meta name="locale" content="es_ES">
+<meta id="config" data-app-id="com.linkedin.jobs-guest-frontend.d_web" data-custom-tracking-code="" data-tracking-page-type="">
+<meta id="google-analytics-config" data-use-location-for-dp="" data-use-page-title="">
+<link rel="canonical" href="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+<link rel="manifest" href="/homepage-guest/manifest.json" crossorigin="use-credentials">
+<meta property="al:android:url" content="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+<meta property="al:android:package" content="com.linkedin.android">
+<meta property="al:android:app_name" content="LinkedIn">
+<meta property="al:ios:url" content="https://es.linkedin.com/jobs/view/java-kotlin-engineer-at-bumble-2245667119?refId=efdd5538-8260-498f-b450-fc5b3456a1dd">
+<meta property="al:ios:app_store_id" content="288429040">
+<meta property="al:ios:app_name" content="LinkedIn">
+<link rel="icon" href="https://static-exp1.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico">
+<script>function getDfd() {let yFn,nFn;const p=new Promise((y, n)=>{yFn=y;nFn=n;});p.resolve=yFn;p.reject=nFn;return p;}window.lazyloader = getDfd();window.tracking = getDfd();window.impressionTracking = getDfd();window.ingraphTracking = getDfd();window.appDetection = getDfd();</script>
+<script src="https://static-exp1.licdn.com/sc/h/ec4mdgijccslffs14mpzdyffn" async></script>
+<title>Bumble busca personas para el cargo de Java Kotlin Engineer en Barcelona, Cataluña, España | LinkedIn</title>
