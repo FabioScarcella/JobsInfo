@@ -16,6 +16,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 /**
  * Saves the raw HTML info from URLInfo into a new File
@@ -72,6 +76,12 @@ public class SaveHTMLInfo {
             FileOutputStream fos = new FileOutputStream(fOut);
             
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+            
+            if(rawHtml.size() < 2){ //all the HTML info it's stored in 1 String meaning that there's not formatted
+               rawHtml = formatHtml(rawHtml.get(0));
+            }
+            
+            
             for(int i = 0; i < rawHtml.size(); i++){
                 bw.write(rawHtml.get(i));
                 bw.newLine();
@@ -87,6 +97,22 @@ public class SaveHTMLInfo {
         }
     }
     
+    /**
+     * Formats the HTML
+     * @param rawHtml in String, all the HTML info it's stored in 1 single line
+     * @return ArrayList<String> with all the HTML info splitted line by line
+     */
+    private ArrayList<String> formatHtml(String rawHtml){
+        Document doc = Jsoup.parseBodyFragment(rawHtml);
+        Elements els = doc.getAllElements();
+        
+        ArrayList<String> formattedHtml = new ArrayList<>();
+        
+        for(Element el:els){
+            formattedHtml.add(el.toString());
+        }
+        return formattedHtml;
+    }
     
     
     public String getFileName(){

@@ -52,16 +52,14 @@ public class ExamineHTML {
     private void extractOffers(){
         ArrayList<String> offers = new ArrayList<>();
         
-        
-        Element content = document.select(".content").first();
-        Elements offersLink = content.select("li.jobs-search-results__list-item");
+        Elements offersLink = document.select("div.w3-col l6 w3-center");
         
         out.println(offersLink);
         
         
         for(Element offerLink:offersLink){
             //offers.add(offerLink.attr("href"));
-            out.println("HEY HEY");
+            out.println(offerLink.attr("a"));
         }
         
         out.println(offers);
