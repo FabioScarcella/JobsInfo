@@ -29,7 +29,6 @@ public class ListOffersFiles {
         
         for(String name:pathNames){
             names.add(name);
-            System.out.println(names);
         }
         
         return names;

@@ -6,6 +6,7 @@
 package com.mycompany.jobsinfo;
 
 import com.mycompany.allOffers.URLInfo;
+import com.mypackage.textInterpreter.Trainee;
 
 /**
  * Main class
@@ -19,6 +20,7 @@ public class JobsInfo {
      */
     public static void main(String[] args){
        URLInfo urlinfo = new URLInfo(args[0]);
+       //Trainee train = new Trainee();
     }
     
 }
