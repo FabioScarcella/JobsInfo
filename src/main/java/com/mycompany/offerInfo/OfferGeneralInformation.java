@@ -37,14 +37,14 @@ public class OfferGeneralInformation {
         
         int index = 0;
         
-        /*for(String link:links){
+        for(String link:links){
             getHTMLOffer(link, index);
             ++index;
-        }*/
-        for(int i = 0; i < 10; i++){
+        }
+        /*for(int i = 0; i < 10; i++){
             getHTMLOffer(links.get(i), index);
             ++index;
-        }
+        }*/
         
         analyzeEachOffer();
     }

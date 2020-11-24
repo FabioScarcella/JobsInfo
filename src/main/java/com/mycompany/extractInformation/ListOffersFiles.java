@@ -18,6 +18,15 @@ public class ListOffersFiles {
     public ListOffersFiles(){
         nameOfFiles = getNames();
         
+        for(String nameFile:nameOfFiles){
+            AnalyzeOffer analyze = new AnalyzeOffer(nameFile);
+            analyze.ReadFile();
+            
+            double expectedTime = System.currentTimeMillis() + (1000*0.2);
+            while(System.currentTimeMillis() < expectedTime){
+                //Empty Loop   
+            }
+        }
     }
     
     private ArrayList<String> getNames(){

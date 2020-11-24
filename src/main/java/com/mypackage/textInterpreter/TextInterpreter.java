@@ -19,13 +19,14 @@ import opennlp.tools.doccat.DocumentCategorizerME;
  * @author Fabio
  */
 public class TextInterpreter {
-    private String text;
+    private String clasification;
     
     public TextInterpreter(){
         
     }
     
-    private void startClassification(){
+    public Boolean startClassification(String text){
+        String category = null;
         try {
             //ACCESS TO THE TRAINED FILE AND CREATE THE MODEL
             InputStream is = 
@@ -38,18 +39,18 @@ public class TextInterpreter {
                     new DocumentCategorizerME(m);
             
             double[] outcomes = myCategorizer.categorize(inputText);
-            String category = myCategorizer.getBestCategory(outcomes);
+            category = myCategorizer.getBestCategory(outcomes);
             
-            System.out.println(text + " and the category is: " + category);
+            //System.out.println(text + " and the category is: " + category);
         } catch (IOException ex) {
             Logger.getLogger(TextInterpreter.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    
-    public void setText(String text){
-        this.text = text;
-    }
-    public String getText(){
-        return this.text;
+        
+        if(category.equals("Requirments")){
+            return true;
+        }else{
+            return false;
+        }
+        
     }
 }
